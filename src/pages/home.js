@@ -5,15 +5,14 @@ import NavBar from '../containers/App/NavBar';
 import InfoCard from '../containers/App/InfoCard';
 import Container from '@material-ui/core/Container';
 import Projects from '../pages/projects';
-import Home from '../pages/home';
-import Resume from '../pages/resume';
 
 const HomeWrapper = styled.div`
   background-image: url(${sf});
-  height: 100%; 
-  width: 100%;
-  background-position: center;
+  height: 100vh;
+  min-height: 500px;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   .container {
     margin-top: 8%;
@@ -23,13 +22,16 @@ const HomeWrapper = styled.div`
   }
 `;
 
-export default function Page() {
+export default function Home() {
   document.body.style.margin = 0;
   return (
-    <div>
-      <Home/>
-      <Resume/>
-      <Projects/>
-    </div>
+    <section id='#home'>
+        <HomeWrapper>
+        <NavBar/>
+        <Container className='container' maxWidth="sm" >
+            <InfoCard/>
+        </Container>
+        </HomeWrapper>
+    </section>
   )
 }
