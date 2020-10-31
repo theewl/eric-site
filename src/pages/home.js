@@ -15,7 +15,7 @@ const HomeWrapper = styled.div`
   background-attachment: fixed;
   background-size: cover;
   .container {
-    margin-top: 8%;
+    padding-top: 10%;
     @media (max-width: 400px) {
       margin-top: 15%;
     }
@@ -23,11 +23,9 @@ const HomeWrapper = styled.div`
 `;
 
 export default function Home() {
-  document.body.style.margin = 0;
   return (
-    <section id='#home'>
+    <section id='home'>
         <HomeWrapper>
-        <NavBar/>
         <Container className='container' maxWidth="sm" >
             <InfoCard/>
         </Container>

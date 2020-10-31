@@ -27,6 +27,7 @@ export default function Page() {
   document.body.style.margin = 0;
   return (
     <div>
+      <NavBar/>
       <Home/>
       <Resume/>
       <Projects/>
