@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container';
 import Projects from '../pages/projects';
 import Home from '../pages/home';
 import Resume from '../pages/resume';
+import Footer from '../containers/App/Footer';
 
 const HomeWrapper = styled.div`
   background-image: url(${sf});
@@ -18,7 +19,7 @@ const HomeWrapper = styled.div`
   .container {
     margin-top: 8%;
     @media (max-width: 400px) {
-      margin-top: 15%;
+      padding-top: 15%;
     }
   }
 `;
@@ -31,6 +32,7 @@ export default function Page() {
       <Home/>
       <Resume/>
       <Projects/>
+      <Footer/>
     </div>
   )
 }

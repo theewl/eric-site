@@ -17,7 +17,7 @@ const HomeWrapper = styled.div`
   .container {
     padding-top: 10%;
     @media (max-width: 400px) {
-      margin-top: 15%;
+      padding-top: 15%;
     }
   }
 `;

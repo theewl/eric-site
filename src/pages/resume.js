@@ -1,5 +1,5 @@
 import React from "react"
-import folders from '../images/folders.jpg';
+import pen from '../images/pen.jpeg';
 import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -22,21 +22,20 @@ const ResumeWrapper = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(${folders});
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(${pen});
   text-align: -webkit-center;
 `;
 
 const useStyles = makeStyles({
   title: {
-    fontSize:'35px', 
+    fontSize:'40px', 
     color:'white',
     fontFamily: 'Cambria',
     color: 'antiquewhite',
-    fontWeight: '600'
   },
   resumeSection: {
     display: 'block',
-    padding: '150px',
+    padding: '180px',
     [theme.breakpoints.down("xs")]: {
       padding: '50px',
     },
@@ -48,14 +47,13 @@ const useStyles = makeStyles({
     border: '2px solid antiquewhite',
     fontSize: '20px',
     height: '50px',
-    width: '150px',
+    width: '180px',
     cursor: 'pointer',
     '&:hover': {
-      animation: '$enlarge 1s',
-      animationIterationCount: '3',
+      animation: '$enlarge 1s forwards',
     },
     [theme.breakpoints.down("xs")]: {
-      width: '40%',
+      width: '100%',
     },
   },
   '@keyframes enlarge': {

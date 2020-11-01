@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     animation: '$fadein 1s',
     opacity: '95%',
     [theme.breakpoints.down("xs")]: {
-      marginTop: '100px',
+      marginTop: '50px',
     },
   },
   headshot: {
