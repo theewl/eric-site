@@ -8,13 +8,17 @@ import ResumeSection from "../components/App/ResumeSection"
 import ShopSection from "../components/App/ShopSection"
 import Footer from "../components/App/Footer"
 import { Helmet } from "react-helmet"
+import { createGlobalStyle } from "styled-components"
 
-export default function Page() {
-  if (typeof document !== "undefined") {
-    document.body.style.margin = 0
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
   }
+`
+export default function Page() {
   return (
     <div>
+      <GlobalStyle />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Eric W Liang</title>

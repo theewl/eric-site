@@ -49,9 +49,6 @@ const ProjectWrapper = styled.div`
 `
 
 export default function Projects() {
-  if (typeof document !== "undefined") {
-    document.body.style.margin = 0
-  }
   return (
     <section id="projects">
       <BadgeWrapper style={{ paddingTop: "50px" }}>

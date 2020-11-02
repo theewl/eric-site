@@ -5,6 +5,7 @@ import Container from "@material-ui/core/Container"
 import { navigate } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import { createMuiTheme } from "@material-ui/core/styles"
+import { createGlobalStyle } from "styled-components"
 
 const theme = createMuiTheme({
   breakpoints: {
@@ -48,14 +49,18 @@ const useStyles = makeStyles({
   },
 })
 
-export default function Shop() {
-  if (typeof document !== "undefined") {
-    document.body.style.margin = 0
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
   }
+`
+
+export default function Shop() {
   const classes = useStyles()
 
   return (
     <ShopWrapper>
+      <GlobalStyle />
       <div style={{ paddingTop: "30px" }}>
         <font
           style={{
