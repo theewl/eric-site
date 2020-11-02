@@ -6,11 +6,5 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [
-    `gatsby-plugin-smoothscroll`,
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {},
-    },
-  ],
+  plugins: [`gatsby-plugin-smoothscroll`, "gatsby-plugin-styled-components"],
 }
