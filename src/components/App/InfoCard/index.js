@@ -2,7 +2,7 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Card from "@material-ui/core/Card"
 import avatar from "../../../images/avatar.png"
-//import useMediaQuery from '@material-ui/core/useMediaQuery';
+import styled from "styled-components"
 import { createMuiTheme } from "@material-ui/core/styles"
 
 const theme = createMuiTheme({
@@ -17,6 +17,25 @@ const theme = createMuiTheme({
   },
 })
 
+const Info = styled(Card)`
+  border-radius: 10%;
+  background: #4e463c;
+  text-align: -webkit-center;
+  height: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  animation: $fadein 1s;
+  opacity: 95%;
+  .headshot {
+    width: 150px;
+    border-radius: 50%;
+  }
+  ,
+  @media (max-width: 400px) {
+    margin-top: 50px;
+  }
+`
+
 const useStyles = makeStyles({
   name: {
     fontSize: "80px",
@@ -26,23 +45,6 @@ const useStyles = makeStyles({
     [theme.breakpoints.down("xs")]: {
       fontSize: "50px",
     },
-  },
-  root: {
-    borderRadius: "10%",
-    background: "#4e463c",
-    textAlign: "-webkit-center",
-    height: "450px",
-    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-    transition: "0.3s",
-    animation: "$fadein 1s",
-    opacity: "95%",
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "50px",
-    },
-  },
-  headshot: {
-    width: "150px",
-    borderRadius: "50%",
   },
   bio: {
     color: "antiquewhite",
@@ -83,13 +85,13 @@ export default function SimpleCard() {
   const classes = useStyles()
 
   return (
-    <Card className={classes.root}>
+    <Info>
       <br />
       <br />
       <div className={classes.info}>
         <font className={classes.name}>Eric Liang</font>
         <br />
-        <img className={classes.headshot} src={avatar} alt="pic" />
+        <img className="headshot" src={avatar} alt="pic" />
         <br />
         <br />
         <font className={classes.bio}>
@@ -101,6 +103,6 @@ export default function SimpleCard() {
           <font style={{ fontFamily: "Cambria", color: "slategray" }}></font>
         </font>
       </div>
-    </Card>
+    </Info>
   )
 }
