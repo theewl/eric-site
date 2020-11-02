@@ -17,7 +17,7 @@ const theme = createMuiTheme({
   },
 })
 
-const Info = styled(Card)`
+const Info = styled.div`
   border-radius: 10%;
   background: #4e463c;
   text-align: -webkit-center;
