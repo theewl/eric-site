@@ -1,10 +1,8 @@
 import React from "react"
-import sf from '../images/sf.jpg';
-import styled from 'styled-components';
-import NavBar from '../containers/App/NavBar';
-import InfoCard from '../containers/App/InfoCard';
-import Container from '@material-ui/core/Container';
-import Projects from '../pages/projects';
+import sf from "../../../images/sf.jpg"
+import styled from "styled-components"
+import InfoCard from "../../../components/App/InfoCard"
+import Container from "@material-ui/core/Container"
 
 const HomeWrapper = styled.div`
   background-image: url(${sf});
@@ -20,16 +18,16 @@ const HomeWrapper = styled.div`
       padding-top: 15%;
     }
   }
-`;
+`
 
 export default function Home() {
   return (
-    <section id='home'>
-        <HomeWrapper>
-        <Container className='container' maxWidth="sm" >
-            <InfoCard/>
+    <section id="home">
+      <HomeWrapper>
+        <Container className="container" maxWidth="sm">
+          <InfoCard />
         </Container>
-        </HomeWrapper>
+      </HomeWrapper>
     </section>
   )
 }
