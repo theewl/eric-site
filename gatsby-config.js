@@ -6,5 +6,9 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-smoothscroll`, "gatsby-plugin-styled-components"],
+  plugins: [
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-material-ui`,
+  ],
 }
