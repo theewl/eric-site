@@ -36,68 +36,21 @@ const Info = styled.div`
   }
 `
 
-const useStyles = makeStyles({
-  name: {
-    fontSize: "80px",
-    fontFamily: "Cambria",
-    fontWeight: 600,
-    color: "antiquewhite",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "50px",
-    },
-  },
-  bio: {
-    color: "antiquewhite",
-    fontFamily: "Cambria",
-    [theme.breakpoints.down("xs")]: {
-      display: "contents",
-    },
-  },
-  info: {
-    display: "grid",
-    [theme.breakpoints.down("xs")]: {
-      display: "inline-grid",
-    },
-  },
-  "@keyframes fadein": {
-    from: {
-      opacity: 0,
-    },
-    to: {
-      opacity: "95%",
-    },
-    "0%": {
-      transform: "scale(0.5,0.5)",
-    },
-    "100%": {
-      transform: "scale(1,1)",
-    },
-  },
-  divider: {
-    visibility: "initial",
-    [theme.breakpoints.down("xs")]: {
-      visibility: "hidden",
-    },
-  },
-})
-
 export default function SimpleCard() {
-  const classes = useStyles()
-
   return (
     <Info>
       <br />
       <br />
-      <div className={classes.info}>
-        <font className={classes.name}>Eric Liang</font>
+      <div>
+        <font>Eric Liang</font>
         <br />
         <img className="headshot" src={avatar} alt="pic" />
         <br />
         <br />
-        <font className={classes.bio}>
+        <font>
           Software Engineer
           <font style={{ fontFamily: "Cambria", color: "slategray" }}>
-            <font className={classes.divider}> | </font>
+            <font> | </font>
           </font>{" "}
           San Francisco{" "}
           <font style={{ fontFamily: "Cambria", color: "slategray" }}></font>
