@@ -7,6 +7,7 @@ import Home from "../components/App/Home"
 import ResumeSection from "../components/App/ResumeSection"
 import ShopSection from "../components/App/ShopSection"
 import Footer from "../components/App/Footer"
+import { Helmet } from "react-helmet"
 
 export default function Page() {
   if (typeof document !== "undefined") {
@@ -14,6 +15,10 @@ export default function Page() {
   }
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Eric W Liang</title>
+      </Helmet>
       <NavBar />
       <Home />
       <ResumeSection />
