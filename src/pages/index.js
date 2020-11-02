@@ -9,7 +9,9 @@ import ShopSection from "../components/App/ShopSection"
 import Footer from "../components/App/Footer"
 
 export default function Page() {
-  document.body.style.margin = 0
+  if (typeof document !== "undefined") {
+    document.body.style.margin = 0
+  }
   return (
     <div>
       <NavBar />

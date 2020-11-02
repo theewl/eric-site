@@ -70,7 +70,9 @@ const useStyles = makeStyles({
 })
 
 export default function Footer() {
-  document.body.style.margin = 0
+  if (typeof document !== "undefined") {
+    document.body.style.margin = 0
+  }
   const classes = useStyles()
   return (
     <section id="footer">

@@ -65,7 +65,9 @@ const useStyles = makeStyles({
 })
 
 export default function Resume() {
-  document.body.style.margin = 0
+  if (typeof document !== "undefined") {
+    document.body.style.margin = 0
+  }
   const classes = useStyles()
   return (
     <section id="resume">

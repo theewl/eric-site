@@ -49,7 +49,9 @@ const useStyles = makeStyles({
 })
 
 export default function Shop() {
-  document.body.style.margin = 0
+  if (typeof document !== "undefined") {
+    document.body.style.margin = 0
+  }
   const classes = useStyles()
 
   return (
