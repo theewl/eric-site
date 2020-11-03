@@ -21,6 +21,8 @@ export default function Page() {
       <GlobalStyle />
       <Helmet>
         <meta charSet="utf-8" />
+        <meta charSet="utf-8" property="og:title" content="Eric W Liang" />
+        <meta name="author" content="Eric W Liang" />
         <title>Eric W Liang</title>
       </Helmet>
       <NavBar />
