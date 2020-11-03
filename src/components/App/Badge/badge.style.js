@@ -41,6 +41,9 @@ export const useStyles = makeStyles({
       animation: "$lightUp 1s forwards",
       display: "absolute",
     },
+    [theme.breakpoints.down("xs")]: {
+      width: "80%",
+    },
   },
   centered: {
     position: "absolute",
