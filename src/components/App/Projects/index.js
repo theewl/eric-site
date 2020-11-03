@@ -31,6 +31,9 @@ const BadgeWrapper = styled.div`
   text-align: center;
   @media (max-width: 630px) {
     height: auto;
+    background-image: none;
+    background-color: #827059;
+
   },
   .title {
     font-size: 40px;
