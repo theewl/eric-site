@@ -20,15 +20,15 @@ const theme = createMuiTheme({
 })
 
 const FooterWrapper = styled.div`
-  background-color: #4e463c;
+  background-color: #1a1f48;
 `
 
 const useStyles = makeStyles({
   title: {
     fontSize: "30px",
     color: "white",
-    fontFamily: "Cambria",
-    color: "antiquewhite",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+    color: "white",
   },
   footerSection: {
     textAlign: "center",
@@ -45,27 +45,27 @@ const useStyles = makeStyles({
   },
   email: {
     marginRight: "8px",
-    color: "antiquewhite",
+    color: "white",
     "&:hover": {
       color: "white",
     },
   },
   linkedin: {
     marginRight: "8px",
-    color: "antiquewhite",
+    color: "white",
     "&:hover": {
       color: "#0e76a8",
     },
   },
   github: {
-    color: "antiquewhite",
+    color: "white",
     "&:hover": {
       color: "black",
     },
   },
   licenseText: {
-    color: "antiquewhite",
-    fontFamily: "Cambria",
+    color: "white",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
   },
 })
 

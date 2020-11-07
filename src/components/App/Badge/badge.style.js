@@ -8,7 +8,7 @@ import { theme } from "../../../util/theme"
 
 export const useStyles = makeStyles({
   root: {
-    margin: "20px",
+    margin: "5px",
     background: "none",
     opacity: "95%",
     width: "300px",
@@ -29,8 +29,8 @@ export const useStyles = makeStyles({
   title: {
     fontSize: 30,
     textAlign: "center",
-    color: "antiquewhite",
-    fontFamily: "Cambria",
+    color: "white",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
   },
   projectImage: {
     boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
@@ -50,9 +50,9 @@ export const useStyles = makeStyles({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    fontFamily: "Cambria",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
     fontSize: "20px",
-    color: "antiquewhite",
+    color: "white",
   },
   "@keyframes lightUp": {
     "100%": {
@@ -69,7 +69,7 @@ export const useStyles = makeStyles({
   },
   "@keyframes enlarge": {
     "100%": {
-      transform: "scale(1.2,1.2)",
+      transform: "scale(1.06,1.06)",
     },
   },
 })

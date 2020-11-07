@@ -22,17 +22,17 @@ const ResumeWrapper = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(${pen});
   text-align: -webkit-center;
 `
 
 const useStyles = makeStyles({
   title: {
-    fontSize: "40px",
+    fontSize: "35px",
     color: "white",
-    fontFamily: "Cambria",
-    color: "antiquewhite",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+    color: "white",
   },
   resumeSection: {
     display: "block",
@@ -43,9 +43,9 @@ const useStyles = makeStyles({
   },
   button: {
     backgroundColor: "unset",
-    color: "antiquewhite",
-    fontFamily: "Cambria",
-    border: "2px solid antiquewhite",
+    color: "white",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+    border: "2px solid white",
     fontSize: "20px",
     height: "50px",
     width: "180px",

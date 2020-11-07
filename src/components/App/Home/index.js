@@ -5,10 +5,10 @@ import InfoCard from "../../../components/App/InfoCard"
 import Container from "@material-ui/core/Container"
 
 const HomeWrapper = styled.div`
-  background-image: url(${sf});
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(${sf});
   height: 100vh;
   min-height: 500px;
-  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

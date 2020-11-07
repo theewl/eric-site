@@ -31,8 +31,8 @@ const useStyles = makeStyles({
   title: {
     marginRight: "40px",
     textDecoration: "none",
-    color: "antiquewhite",
-    fontFamily: "Cambria",
+    color: "white",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
     position: "relative",
     cursor: "pointer",
     "&::before": {
@@ -42,7 +42,7 @@ const useStyles = makeStyles({
       height: "2px",
       bottom: "0",
       left: "0",
-      backgroundColor: "antiquewhite",
+      backgroundColor: "white",
       visibility: "hidden",
       transform: "scaleX(0)",
       transition: "all 0.3s ease-in-out",
@@ -66,12 +66,12 @@ const useStyles = makeStyles({
       duration: theme.transitions.duration.standard,
     }),
     [theme.breakpoints.down("xs")]: {
-      background: "#4e463c",
+      background: "#1a1f48",
     },
   },
   appBarScrolled: {
-    background: "#4e463c",
-    height: "55px",
+    background: "#1a1f48",
+    height: "60px",
     transition: theme.transitions.create(["background-color"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.standard,
@@ -79,7 +79,7 @@ const useStyles = makeStyles({
   },
   hamburger: {
     display: "none",
-    color: "antiquewhite",
+    color: "white",
     [theme.breakpoints.down("xs")]: {
       display: "block",
     },
@@ -106,7 +106,7 @@ const useStyles = makeStyles({
   },
   menuOption: {
     cursor: "pointer",
-    fontFamily: "Cambria",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
   },
 })
 
@@ -140,7 +140,11 @@ export default function NavBar({ login }) {
             <a onClick={() => scrollTo("#projects")} className={classes.title}>
               PROJECTS
             </a>
-            <a onClick={() => scrollTo("#shop")} className={classes.title}>
+            <a
+              onClick={() => scrollTo("#shop")}
+              className={classes.title}
+              style={{ marginRight: 0 }}
+            >
               SHOP
             </a>
             {login && (

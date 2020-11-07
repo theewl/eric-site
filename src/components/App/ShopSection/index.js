@@ -31,8 +31,8 @@ const useStyles = makeStyles({
   title: {
     fontSize: "40px",
     color: "white",
-    fontFamily: "Cambria",
-    color: "antiquewhite",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+    color: "white",
   },
   shopSection: {
     display: "block",
@@ -43,9 +43,9 @@ const useStyles = makeStyles({
   },
   button: {
     backgroundColor: "unset",
-    color: "antiquewhite",
-    fontFamily: "Cambria",
-    border: "2px solid antiquewhite",
+    color: "white",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+    border: "2px solid white",
     fontSize: "20px",
     height: "50px",
     width: "180px",

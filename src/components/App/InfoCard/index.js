@@ -19,20 +19,16 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles({
   name: {
-    fontSize: "80px",
-    fontFamily: "Cambria",
-    fontWeight: 600,
-    color: "antiquewhite",
+    fontSize: "50px",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+    color: "white",
     [theme.breakpoints.down("xs")]: {
       fontSize: "50px",
     },
   },
   root: {
-    borderRadius: "10%",
-    background: "#4e463c",
     textAlign: "-webkit-center",
     height: "450px",
-    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
     transition: "0.3s",
     animation: "$fadein 1s",
     opacity: "95%",
@@ -45,8 +41,8 @@ const useStyles = makeStyles({
     borderRadius: "50%",
   },
   bio: {
-    color: "antiquewhite",
-    fontFamily: "Cambria",
+    color: "white",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
     [theme.breakpoints.down("xs")]: {
       display: "contents",
     },
@@ -83,24 +79,36 @@ export default function SimpleCard() {
   const classes = useStyles()
 
   return (
-    <Card className={classes.root}>
+    <div className={classes.root}>
       <br />
       <br />
       <div className={classes.info}>
-        <font className={classes.name}>Eric Liang</font>
+        <font className={classes.name}>Eric W Liang</font>
         <br />
         <img className={classes.headshot} src={avatar} alt="pic" />
         <br />
         <br />
         <font className={classes.bio}>
           Software Engineer
-          <font style={{ fontFamily: "Cambria", color: "slategray" }}>
+          <font
+            style={{
+              fontFamily:
+                "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+              color: "slategray",
+            }}
+          >
             <font className={classes.divider}> | </font>
           </font>{" "}
           San Francisco{" "}
-          <font style={{ fontFamily: "Cambria", color: "slategray" }}></font>
+          <font
+            style={{
+              fontFamily:
+                "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+              color: "slategray",
+            }}
+          ></font>
         </font>
       </div>
-    </Card>
+    </div>
   )
 }

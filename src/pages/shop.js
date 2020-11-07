@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   button: {
     backgroundColor: "unset",
     color: "red",
-    fontFamily: "Cambria",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
     border: "2px solid red",
     fontSize: "20px",
     height: "50px",
@@ -65,7 +65,7 @@ export default function Shop() {
         <font
           style={{
             fontSize: "60px",
-            fontFamily: "Cambria",
+            fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
             fontWeight: "800",
             color: "red",
           }}

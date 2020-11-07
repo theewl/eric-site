@@ -22,24 +22,24 @@ const theme = createMuiTheme({
 })
 
 const BadgeWrapper = styled.div`
-  height: 750px;
+  height: 650px;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-image: url(${table});
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${table});
   text-align: center;
   @media (max-width: 630px) {
     height: auto;
     background-image: none;
-    background-color: #827059;
+    background-color: #8d8d92;
 
   },
   .title {
-    font-size: 40px;
+    font-size: 35px;
     color: white;
-    font-family: Cambria;
-    color: antiquewhite;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; ;
+    color: white;
   },
 `
 
@@ -54,13 +54,13 @@ const ProjectWrapper = styled.div`
 export default function Projects() {
   return (
     <section id="projects">
-      <BadgeWrapper style={{ paddingTop: "50px" }}>
+      <BadgeWrapper style={{ paddingTop: "75px" }}>
         <font className="title">PROJECTS</font>
         <ProjectWrapper style={{ marginTop: "80px" }}>
           <Badge
             projectURL="https://github.com/theewl/fantasyBasketballWizard"
             projectPic={FantasyWzrd}
-            projectName="Fantasy Basketball Wzrd"
+            projectName="Fantasy Basketball Wizrd"
           />
           <Badge
             projectURL="https://github.com/theewl/BlastWebClient"
