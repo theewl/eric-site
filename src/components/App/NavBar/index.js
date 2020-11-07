@@ -100,7 +100,7 @@ const useStyles = makeStyles({
   },
   menuOptions: {
     animation: "$fadein 2s",
-    backgroundColor: "#4e463c",
+    backgroundColor: "#1a1f48",
     opacity: "85%",
     borderTop: "ridge",
   },

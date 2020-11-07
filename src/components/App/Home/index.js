@@ -16,6 +16,8 @@ const HomeWrapper = styled.div`
     padding-top: 10%;
     @media (max-width: 400px) {
       padding-top: 15%;
+      background-image: none;
+      background-color: #4c4a4a;
     }
   }
 `
