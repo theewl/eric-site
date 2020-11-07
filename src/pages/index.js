@@ -1,6 +1,4 @@
 import React from "react"
-import sf from "../images/sf.jpg"
-import styled from "styled-components"
 import NavBar from "../components/App/NavBar"
 import Projects from "../components/App/Projects"
 import Home from "../components/App/Home"
