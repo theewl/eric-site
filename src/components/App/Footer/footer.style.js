@@ -15,7 +15,7 @@ export const theme = createMuiTheme({
 })
 
 export const FooterWrapper = styled.div`
-  background-color: #1a1f48;
+  background-color: #003366;
 `
 
 export const useStyles = makeStyles({

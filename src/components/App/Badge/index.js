@@ -1,5 +1,4 @@
 import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
 import { useStyles } from "./badge.style"
 
 export default function Badge({ projectName, projectPic, projectURL }) {

@@ -58,11 +58,11 @@ export const useStyles = makeStyles({
       duration: theme.transitions.duration.standard,
     }),
     [theme.breakpoints.down("xs")]: {
-      background: "#1a1f48",
+      background: "#003366",
     },
   },
   appBarScrolled: {
-    background: "#1a1f48",
+    background: "#003366",
     height: "60px",
     transition: theme.transitions.create(["background-color"], {
       easing: theme.transitions.easing.easeOut,
@@ -92,7 +92,7 @@ export const useStyles = makeStyles({
   },
   menuOptions: {
     animation: "$fadein 2s",
-    backgroundColor: "#1a1f48",
+    backgroundColor: "#003366",
     opacity: "85%",
     borderTop: "ridge",
   },

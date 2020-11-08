@@ -16,7 +16,7 @@ export default function Projects() {
           <Badge
             projectURL="https://github.com/theewl/fantasyBasketballWizard"
             projectPic={FantasyWzrd}
-            projectName="Fantasy Basketball Wizrd"
+            projectName="Fantasy Basketball Wizard"
           />
           <Badge
             projectURL="https://github.com/theewl/BlastWebClient"
