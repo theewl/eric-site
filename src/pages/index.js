@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 `
-export default function Page() {
+export default function Page(props) {
   return (
     <div>
       <GlobalStyle />
@@ -23,7 +23,8 @@ export default function Page() {
         <meta name="author" content="Eric W Liang" />
         <title>Eric W Liang</title>
       </Helmet>
-      <NavBar />
+      {console.log(props)}
+      <NavBar menuItems={["HOME", "RESUME", "PROJECTS", "SHOP"]} />
       <Home />
       <ResumeSection />
       <Projects />

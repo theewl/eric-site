@@ -1,11 +1,15 @@
 import React from "react"
-import sf from "../images/sf.jpg"
+import shop from "../images/shop.jpg"
 import styled from "styled-components"
-import Container from "@material-ui/core/Container"
-import { navigate } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import { createMuiTheme } from "@material-ui/core/styles"
 import { createGlobalStyle } from "styled-components"
+import { Helmet } from "react-helmet"
+import NavBar from "../components/App/NavBar"
+import Footer from "../components/App/Footer"
+import Items from "../components/App/Items"
+import ShopHome from "../components/App/ShopHome"
+import Sold from "../components/App/Sold"
 
 const theme = createMuiTheme({
   breakpoints: {
@@ -20,14 +24,13 @@ const theme = createMuiTheme({
 })
 
 const ShopWrapper = styled.div`
-  background-image: url(${sf});
+  background-image: url(${shop});
   height: 100vh;
   min-height: 500px;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  text-align: center;
 `
 
 const useStyles = makeStyles({
@@ -61,23 +64,20 @@ export default function Shop() {
   return (
     <ShopWrapper>
       <GlobalStyle />
-      <div style={{ paddingTop: "30px" }}>
-        <font
-          style={{
-            fontSize: "60px",
-            fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
-            fontWeight: "800",
-            color: "red",
-          }}
-        >
-          SHOP IS COMING SOON!!!
-        </font>
-        <br />
-        <br />
-        <button onClick={() => navigate("/")} className={classes.button}>
-          BACK
-        </button>
-      </div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta property="og:title" content="EWL Shop" />
+        <meta name="author" content="EWL Shop" />
+        <title>EWL Shop</title>
+      </Helmet>
+      <ShopHome />
+      <NavBar
+        inShop={true}
+        menuItems={["HOME", "FOR SALE", "SOLD", "CONTACT"]}
+      />
+      <Items />
+      <Sold />
+      <Footer />
     </ShopWrapper>
   )
 }

@@ -23,7 +23,6 @@ export const useStyles = makeStyles({
   title: {
     marginRight: "40px",
     textDecoration: "none",
-    color: "white",
     fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
     position: "relative",
     cursor: "pointer",
@@ -71,7 +70,6 @@ export const useStyles = makeStyles({
   },
   hamburger: {
     display: "none",
-    color: "white",
     [theme.breakpoints.down("xs")]: {
       display: "block",
     },

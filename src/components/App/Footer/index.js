@@ -8,7 +8,7 @@ import { FooterWrapper, useStyles } from "./footer.style"
 export default function Footer() {
   const classes = useStyles()
   return (
-    <section id="footer">
+    <section id="contact">
       <FooterWrapper>
         <div className={classes.footerSection}>
           <font className={classes.title}>CONTACT</font>
