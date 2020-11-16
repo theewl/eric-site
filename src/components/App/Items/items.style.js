@@ -22,6 +22,7 @@ export const ItemsWrapper = styled.div`
 export const ProductWrapper = styled.div`
     margin: 60px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     @media (max-width: 630px) {
       display: grid;

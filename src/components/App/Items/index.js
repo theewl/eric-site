@@ -1,34 +1,37 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Product from "../Product"
-import FantasyWzrd from "../../../images/bballwzrd.jpg"
-import Website from "../../../images/website.png"
-import Blast from "../../../images/blast.png"
-import Boardgame from "../../../images/boardgame.jpg"
-import Classroom from "../../../images/class.jpg"
+import shoe from "../../../images/tempShoe.png"
 import { ItemsWrapper, ProductWrapper } from "./items.style"
+import axios from "axios"
 
 export default function Items() {
+  const [products, setProducts] = useState([])
+  useEffect(() => {
+    axios
+      .get("https://ewl-shop.vercel.app/api/mongo/getProducts")
+      .then(function (response) {
+        const tmp = JSON.stringify(response.data)
+        const newData = JSON.parse(tmp)
+        setProducts(newData.products)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error)
+      })
+  }, [])
   return (
     <section id="for-sale">
       <ItemsWrapper style={{ paddingTop: "75px" }}>
+        {/* 
+        - product picture
+        - product name
+        - product id
+        */}
         <font className="title">FOR SALE</font>
         <ProductWrapper>
-          <Product
-            productPic={FantasyWzrd}
-            productName="Air Jordan 1 Tie Dye"
-          />
-          <Product productPic={Blast} productName="Yeezy 350 Natural" />
-          <Product productPic={Website} productName="Air Jordan 1 Bio Hack" />
-          <Product productPic={Website} productName="Air Jordan 1 Royal Toe" />
-        </ProductWrapper>
-        <ProductWrapper>
-          <Product productPic={Boardgame} productName="Yeezy 350" />
-          <Product productPic={Classroom} productName="Yeezy 700" />
-          <Product
-            productPic={Website}
-            productName="Air Jordan 1 Satin Black Toe"
-          />
-          <Product productPic={Website} productName="Air Jordan 1 Tie Dye" />
+        {products.map((product, i) => (
+          <Product productPic={shoe} productName={product["name"]} />
+        ))}
         </ProductWrapper>
       </ItemsWrapper>
     </section>

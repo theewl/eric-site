@@ -8,7 +8,12 @@ import IconButton from "@material-ui/core/IconButton"
 import MenuIcon from "@material-ui/icons/Menu"
 import { useStyles } from "./navBar.style"
 
-export default function NavBar({ menuItems, inShop, primaryColor = "white" }) {
+export default function NavBar({
+  menuItems,
+  inProductPage,
+  inShop,
+  primaryColor = "white",
+}) {
   const [showMenu, setShowMenu] = useState(false)
   const classes = useStyles()
   const trigger = useScrollTrigger({
@@ -29,39 +34,30 @@ export default function NavBar({ menuItems, inShop, primaryColor = "white" }) {
             <MenuIcon onClick={() => setShowMenu(!showMenu)} />
           </IconButton>
           <div className={classes.linkBackground}>
-            <a
-              onClick={() => scrollTo(`#${menuItems[0].toLowerCase()}`)}
-              style={{ color: primaryColor }}
-              className={classes.title}
-            >
-              {menuItems[0]}
-            </a>
-            <a
-              onClick={() =>
-                menuItems[1].includes(" ")
-                  ? scrollTo(`#${menuItems[1].replace(" ", "-").toLowerCase()}`)
-                  : scrollTo(`#${menuItems[1].toLowerCase()}`)
-              }
-              style={{ color: primaryColor }}
-              className={classes.title}
-            >
-              {menuItems[1]}
-            </a>
-            <a
-              onClick={() => scrollTo(`#${menuItems[2].toLowerCase()}`)}
-              style={{ color: primaryColor }}
-              className={classes.title}
-            >
-              {menuItems[2]}
-            </a>
-            <a
-              onClick={() => scrollTo(`#${menuItems[3].toLowerCase()}`)}
-              className={classes.title}
-              style={{ marginRight: inShop ? "40px" : 0, color: primaryColor }}
-            >
-              {menuItems[3]}
-            </a>
-            {inShop && (
+            {inProductPage ? (
+              <Link
+                style={{ marginRight: 0, color: primaryColor }}
+                to="/shop/#for-sale"
+                className={classes.title}
+              >
+                BACK TO HOME
+              </Link>
+            ) : (
+              menuItems.map(item => (
+                <a
+                  onClick={() =>
+                    item.includes(" ")
+                      ? scrollTo(`#${item.replace(" ", "-").toLowerCase()}`)
+                      : scrollTo(`#${item.toLowerCase()}`)
+                  }
+                  style={{ color: primaryColor }}
+                  className={classes.title}
+                >
+                  {item}
+                </a>
+              ))
+            )}
+            {inShop && !inProductPage && (
               <Link
                 style={{ marginRight: 0, color: primaryColor }}
                 to="/"
@@ -72,34 +68,34 @@ export default function NavBar({ menuItems, inShop, primaryColor = "white" }) {
             )}
           </div>
         </Toolbar>
+
         {showMenu && (
           <span className={classes.menuOptions}>
             <div style={{ display: "grid", color: primaryColor }}>
-              <a
-                onClick={() => scrollTo(`#${menuItems[0].toLowerCase()}`)}
-                style={{ padding: "15px", color: primaryColor }}
-              >
-                <font className={classes.menuOption}> {menuItems[0]}</font>
-              </a>
-              <a
-                onClick={() => scrollTo(`#${menuItems[1].toLowerCase()}`)}
-                style={{ padding: "15px", color: primaryColor }}
-              >
-                <font className={classes.menuOption}> {menuItems[1]}</font>
-              </a>
-              <a
-                onClick={() => scrollTo(`#${menuItems[2].toLowerCase()}`)}
-                style={{ padding: "15px", color: primaryColor }}
-              >
-                <font className={classes.menuOption}> {menuItems[2]}</font>
-              </a>
-              <a
-                onClick={() => scrollTo(`#${menuItems[3].toLowerCase()}`)}
-                style={{ padding: "15px", color: primaryColor }}
-              >
-                <font className={classes.menuOption}> {menuItems[3]}</font>
-              </a>
-              {inShop && (
+              {inProductPage ? (
+                <Link
+                  style={{
+                    color: primaryColor,
+                    padding: "15px",
+                    textDecoration: "none",
+                    width: "fit-content",
+                  }}
+                  to="/shop/#for-sale"
+                >
+                  <font className={classes.menuOption}>BACK TO HOME</font>
+                </Link>
+              ) : (
+                menuItems.map(item => (
+                  <a
+                    onClick={() => scrollTo(`#${item.toLowerCase()}`)}
+                    style={{ padding: "15px", color: primaryColor }}
+                  >
+                    <font className={classes.menuOption}> {item}</font>
+                  </a>
+                ))
+              )}
+
+              {inShop && !inProductPage && (
                 <Link
                   style={{
                     color: primaryColor,

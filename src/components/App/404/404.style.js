@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
-export const ShopHomeWrapper = styled.div`
+export const ErrorWrapper = styled.div`
   height: 100vh;
   min-height: 500px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   @media (max-width: 400px) {
-    background-size: auto;
+    background-size: contain;
   }
   .title {
     text-align: center;

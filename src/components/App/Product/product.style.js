@@ -3,7 +3,7 @@ import { theme } from "../../../util/theme"
 
 export const useStyles = makeStyles({
   root: {
-    margin: "5px",
+    margin: "25px",
     background: "none",
     opacity: "95%",
     width: "300px",

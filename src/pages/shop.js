@@ -10,6 +10,7 @@ import Footer from "../components/App/Footer"
 import Items from "../components/App/Items"
 import ShopHome from "../components/App/ShopHome"
 import Sold from "../components/App/Sold"
+import sneakers from "../images/sneakers.png"
 
 const theme = createMuiTheme({
   breakpoints: {
@@ -37,7 +38,7 @@ const useStyles = makeStyles({
   button: {
     backgroundColor: "unset",
     color: "red",
-    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif; ",
+    fontFamily: "Century Gothic,CenturyGothic,AppleGothic,sans-serif;",
     border: "2px solid red",
     fontSize: "20px",
     height: "50px",
@@ -70,7 +71,7 @@ export default function Shop() {
         <meta name="author" content="EWL Shop" />
         <title>EWL Shop</title>
       </Helmet>
-      <ShopHome />
+      <ShopHome title="EWL Shop" pageImage={sneakers} />
       <NavBar
         inShop={true}
         menuItems={["HOME", "FOR SALE", "SOLD", "CONTACT"]}

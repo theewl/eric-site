@@ -1,11 +1,11 @@
 import React from "react"
 import Container from "@material-ui/core/Container"
-import { ShopHomeWrapper } from "./shopHome.style"
+import { ErrorWrapper } from "./404.style"
 
-export default function ShopHome({ title, pageImage }) {
+export default function ErrorSection({ title, pageImage }) {
   return (
     <section id="home">
-      <ShopHomeWrapper
+      <ErrorWrapper
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url(${pageImage})`,
@@ -16,7 +16,7 @@ export default function ShopHome({ title, pageImage }) {
             <font className="titleText">{title}</font>
           </div>
         </Container>
-      </ShopHomeWrapper>
+      </ErrorWrapper>
     </section>
   )
 }

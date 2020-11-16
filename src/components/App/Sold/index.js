@@ -1,23 +1,35 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Badge from "../Badge"
-import FantasyWzrd from "../../../images/bballwzrd.jpg"
-import Website from "../../../images/website.png"
-import Blast from "../../../images/blast.png"
-import Boardgame from "../../../images/boardgame.jpg"
-import Classroom from "../../../images/class.jpg"
+import shoe from "../../../images/tempShoe.png"
 import { ProjectWrapper, SoldWrapper } from "./sold.style"
+import axios from "axios"
 
 export default function Projects() {
+  const [sold, setSolds] = useState([])
+
+  useEffect(() => {
+    axios
+      .get("https://ewl-shop.vercel.app/api/mongo/getSold")
+      .then(function (response) {
+        const tmp = JSON.stringify(response.data)
+        const newData = JSON.parse(tmp)
+        console.log(newData)
+        setSolds(newData.sold)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error)
+      })
+  }, [])
   return (
     <section id="sold">
       <SoldWrapper style={{ paddingTop: "75px" }}>
         <font className="title">SOLD</font>
-        <ProjectWrapper style={{ marginTop: "80px" }}>
-          <Badge
-            projectURL="https://github.com/theewl/fantasyBasketballWizard"
-            projectPic={FantasyWzrd}
-            projectName="Yeezy 350 Zebra"
-          />
+        <ProjectWrapper style={{ marginTop: "80px",     display: 'flex',
+        flexWrap: 'wrap'}}>
+        {sold.map((product, i) => (
+          <Badge projectPic={shoe} projectName={product["name"]} />
+        ))}
         </ProjectWrapper>
       </SoldWrapper>
     </section>

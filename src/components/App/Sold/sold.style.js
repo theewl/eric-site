@@ -12,7 +12,6 @@ export const SoldWrapper = styled.div`
     @media (max-width: 630px) {
       height: auto;
       background-image: none;
-      background-color: #8d8d92;
   
     },
     .title {
