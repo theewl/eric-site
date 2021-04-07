@@ -14,7 +14,7 @@ export default function Projects() {
         <font className="title">PROJECTS</font>
         <ProjectWrapper style={{ marginTop: "80px" }}>
           <Badge
-            projectURL="https://github.com/theewl/fantasyBasketballWizard"
+            projectURL="https://chrome.google.com/webstore/detail/fantasy-basketball-wzrd/bmojbnihkmbdandkddobjnilkegcooll?hl=en"
             projectPic={FantasyWzrd}
             projectName="Fantasy Basketball Wizard"
           />
